@@ -33,6 +33,12 @@ MT = signalProcess(MTr,115);
 SB = signalProcess(SBr,155);
 ST = signalProcess(STr,25);
 
+%peak detection
+
+%for LB - balloon with long tube
+th = .002;
+[LBpks,LBdep,LBpidx,LBdidx] = peaks(LB,th); %[peak y values, depression y values, peak x values, depression x values]
+
 %% Plotting
 figure(1)
 plot(LB(:,1),LB(:,2))
