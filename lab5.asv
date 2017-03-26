@@ -1,0 +1,42 @@
+%% HEADER
+%Simon Popecki
+%26 March 2017
+%ME646
+%Pressure Tap Lab, lab 5
+
+%% Loading Data
+clear all;
+close all;
+%importing structured arrays
+nheaderlines = 29; %Data starts on line 30
+LBs = importdata('LongBalloon.lvm','\t',nheaderlines); %data for the balloon with long tube
+LTs = importdata('LongTube.lvm','\t',nheaderlines); %data for the long tube using a valve
+MBs = importdata('MediumBalloon.lvm','\t',nheaderlines); %data for the balloon with medium length tube
+MTs = importdata('MediumTube.lvm','\t',nheaderlines); %data for the medium tube using a valve
+SBs = importdata('SmallBalloon.lvm','\t',nheaderlines); %data for the balloon attached to the small tube
+STs = importdata('SmallTube.lvm','\t',nheaderlines); %data for the small tube with no balloon
+
+%extracting data from structured arrays
+%these are the unsmoothed data
+LBr = LBs.data; %column 1 is time in seconds, column 2 is voltage (same for all otherr arrays)
+LTr = LTs.data;
+MBr = MBs.data;
+MTr = MTs.data;
+SBr = SBs.data;
+STr = STs.data;
+
+%signal processing - smooths data and normalizes data
+LB = signalProcess(LBr,115);
+LT = signalProcess(L
+
+%% Plotting
+plot(LB(:,1),LB(:,2))
+
+
+
+
+
+
+
+
+
