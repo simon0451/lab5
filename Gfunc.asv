@@ -1,9 +1,0 @@
-function [stepy] = Gfunc(dataArray,wn,zeta,t)
-
-voltages = dataArray(:,2);
-initialsig = voltages(1);
-num=finalsi-initialsig;%K value
-den = [1/wn^2 2*zeta/wn 1];
-sys=tf(num,den);
-stepy = step(sys+initialsig,t);
-end
