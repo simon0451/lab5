@@ -98,32 +98,32 @@ STomegaDs = num2str(STomegaD,3);
 STtxt = strcat('Damped Natural Frequency: ',STomegaDs,' Hz');
 
 %finding the damping ratios
-LBDR2 = dRatio2(LBpks); %creates an array of damping ratios for the second method (put this in a table)
+LBDR2 = dRatio1(LBpks); %creates an array of damping ratios for the second method (put this in a table)
 LBzeta = mean(LBDR2); %finding the arithmetic mean of the damping ratios from method 2 (results in single DR number)
 LBzetas = num2str(LBzeta,3);
 LBtxt2 = strcat('Damping Ratio: ',LBzetas);
 
-LTDR2 = dRatio2(LTpks);
+LTDR2 = dRatio1(LTpks);
 LTzeta = mean(LTDR2);
 LTzetas = num2str(LTzeta,3);
 LTtxt2 = strcat('Damping Ratio: ',LTzetas);
 
-MBDR2 = dRatio2(MBpks);
+MBDR2 = dRatio1(MBpks);
 MBzeta = mean(MBDR2);
 MBzetas = num2str(MBzeta,3);
 MBtxt2 = strcat('Damping Ratio: ',MBzetas);
 
-MTDR2 = dRatio2(MTpks);
+MTDR2 = dRatio1(MTpks);
 MTzeta = mean(MTDR2);
 MTzetas = num2str(MTzeta,3);
 MTtxt2 = strcat('Damping Ratio: ',MTzetas);
 
-SBDR2 = dRatio2(SBpks);
+SBDR2 = dRatio1(SBpks);
 SBzeta = mean(SBDR2);
 SBzetas = num2str(SBzeta,3);
 SBtxt2 = strcat('Damping Ratio: ',SBzetas);
 
-STDR2 = dRatio2(STpks);
+STDR2 = dRatio1(STpks);
 STzeta = mean(STDR2);
 STzetas = num2str(STzeta,3);
 STtxt2 = strcat('Damping Ratio: ',STzetas);

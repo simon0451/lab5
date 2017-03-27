@@ -1,0 +1,4 @@
+Zeta measured data line equation: y=.0012x+.0388
+Omega measured data line equation: y=10395x+227.3705
+Zeta predicted line equation: y=.001x+1.0593e-18
+Omega predicted line equation: y=19097x-9.3124e-13
