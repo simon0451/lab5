@@ -245,11 +245,11 @@ BF4 = polyfit(lengths,zetaP,1);
 zetaPBF = BF4(1)*lengths+BF4(2);
 
 figure(7)
-plot(inverseLs,omegas,'o',inverseLs,omegaMBF,'b',inverseLs,omegaMBF,'r--')
+plot(inverseLs,omegas,'o',inverseLs,omegaMBF,'b',inverseLs,omegaPBF,'r--')
 title('Comparison of Response to System Parameters')
 xlabel('Inverse Length (1/inches)')
 ylabel('Damped Natural Frequency')
-legend('Measurements','Measurement Fit','location','northwest')
+legend('Measurements','Measurement Fit','Predicted Values','location','northwest')
 grid on
 
 figure(8)
@@ -257,6 +257,6 @@ plot(lengths,zetas,'o',lengths,zetaMBF,'b',lengths,zetaPBF,'r--')
 title('Comparison of Response to System Parameters')
 xlabel('Length (inches)')
 ylabel('Damping Ratio')
-legend('Measurements','Measurement Fit','location','northwest')
+legend('Measurements','Measurement Fit','Predicted Values','location','northwest')
 grid on
 
