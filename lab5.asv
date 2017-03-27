@@ -231,21 +231,10 @@ omegas = [LBomegaD MBomegaD SBomegaD]; %Hz, damped natural frequencies of each t
 zetas = [LBzeta MBzeta SBzeta]; %damping ratio
 lengths = [42.75 34 7.375]; %inches, legnth of the tubes
 inverseLs = 1./lengths; %1/inches, inverse lengths of the tubes
-BF1 = polyfit(inverseLs,omegas,1);
-omegaBF = BF1(1)*inverseLs+BF1(2);
-BF2 = polyfit(lengths,zetas,1);
-zetaBF = BF2(1)*inverseLs+BF2(2);
-
-plot(inverseLs,omegas,'o',inverseLs,omegaBF,'--')
+po
+plot(inverseLs,omegas,'o')
 title('Comparison of Response to System Parameters')
 xlabel('Inverse Length (1/inches)')
 ylabel('Damped Natural Frequency')
-legend('Measurements','Best Fit','location','northwest')
-grid on
 
-plot(lengths,zetas,'o',lengths,zetaBF,'--')
-title('Comparison of Response to System Parameters')
-xlabel('Inverse Length (1/inches)')
-ylabel('Damped Natural Frequency')
-legend('Measurements','Best Fit','location','northwest')
 
